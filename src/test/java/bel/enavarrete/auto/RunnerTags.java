@@ -17,7 +17,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
  *
  */
 
-@CucumberOptions (features = "src/test/resources/features/login.feature", tags = "@caso1", snippets= SnippetType.CAMELCASE)
+@CucumberOptions (features = "src/test/resources/features/Producto.feature", tags = "@caso", snippets= SnippetType.CAMELCASE)
 
 @RunWith(CucumberWithSerenity.class)
 

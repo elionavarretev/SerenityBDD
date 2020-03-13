@@ -1,11 +1,6 @@
 package bel.enavarrete.auto.Steps;
 
-import org.openqa.selenium.interactions.Actions;
-
 import bel.enavarrete.auto.PageObjects.loginPageObjects;
-import net.serenitybdd.core.Serenity;
-import net.serenitybdd.core.annotations.findby.By;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 
 public class loginSteps {
@@ -50,6 +45,7 @@ public class loginSteps {
 		loginObjects.SeleccionarPais(strPais);
 		loginObjects.ingresarUsuario(strUsuario);
 		loginObjects.ingresarContrasenia(strContrasenia);
+		seleccionarIngresar();
 	}
 	
 	@Step
