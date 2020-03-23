@@ -11,7 +11,8 @@ import net.thucydides.core.annotations.Steps;
 public class esikaDefinition {
 
 	@Steps esikaSteps esikaSteps;
-	
+
+
 
 	@Given("^que un invitado y entra a la web esika$")
 	public void queUnInvitadoYEntraALaWebesika(){
@@ -27,34 +28,55 @@ public class esikaDefinition {
 
 	@When("^se dirige a la ficha del producto ([^\"]*)$")
 	public void seDirigeALaFichaDelProducto(String strCualquiera){
-		esikaSteps.ingresarFichaDelProducto(strCualquiera);
+		/*esikaSteps.ingresarFichaDelProducto(strCualquiera);
+
+		 */
 	}
 
 	@When("^agrega ([^\"]*) adicional$")
 	public void agregaAdicional(String strCantidad){
-		esikaSteps.agregarCantidad(strCantidad);
+		/*esikaSteps.agregarCantidad(strCantidad);
+
+		 */
 	}
 
 	@Then("^agrega a la bolsa$")
 	public void agregaALaBolsa() {
-		esikaSteps.seleccionarAgregarBolsa();
+		/*esikaSteps.seleccionarAgregarBolsa();
+
+		 */
 	}
 
 	@Then("^se registra como ([^\"]*)$")
 	public void seRegistraComoInvitadoYDar(String strInvitado){
-		esikaSteps.seleccionarIrPagarPopPup();
+		/*esikaSteps.seleccionarIrPagarPopPup();
 		esikaSteps.seleccionarIrPagar();
 		esikaSteps.ingresarComoInvitado(strInvitado);
+
+		 */
 	}
 
 	@Then("^se registra la dirección de ([^\"]*) y anula la compra$")
 	public void seRegistraLaDirecciónDeYAnulaLaCompra(String strEnvio) {
-		esikaSteps.ingresarDireccionEnvio(strEnvio);
+		/*esikaSteps.ingresarDireccionEnvio(strEnvio);
 		esikaSteps.seleccionarAnulaCompra();
 		String mensaje[] = esikaSteps.obtenerMensajeConfirmaEliminacion().split("\n");
-		
-		assertEquals("El producto ha sido eliminado de tu Carrito.", mensaje[1].trim());	
+
+		assertEquals("El producto ha sido eliminado de tu Carrito.", mensaje[1].trim());
+		 */
 	}
 
+
+	@When("^se dirige a buscar$")
+	public void seDirigeABuscar() throws Throwable {
+		//esikaSteps.seleccionarIrATienda();
+		//Do nothing
+	}
+
+
+	@Then("^ingresar ([^\"]*) selecciona buscar$")
+	public void ingresarXYSeleccionaBuscar(String strDato) {
+		esikaSteps.ingresarDato(strDato);
+	}
 
 }

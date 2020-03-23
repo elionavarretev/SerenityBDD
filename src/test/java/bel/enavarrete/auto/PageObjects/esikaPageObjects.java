@@ -9,7 +9,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("https://www.esika.com/pe")
+@DefaultUrl("https://lbel.tiendabelcorp.com/pe/search/?text=bio")
 
 public class esikaPageObjects extends PageObject{
 
@@ -43,9 +43,12 @@ public class esikaPageObjects extends PageObject{
 	String txtReferencia = "address.referencia";
 	String txtTelefono = "address.phone";
 	String btnContinuar = "addressSubmit";
+	String btnIrATienda = "//*[@id=\"_2_eqL1nhjcAHh9GEklzlA6\"]/div[1]/div[3]";
+	String txtBuscar = "js-site-search-input";
 	
 	String btnEliminar = "/html/body/main/section[1]/div/div/div[1]/div/ul/li[2]/table/tbody/tr/td/li[1]/div[8]/div/a/span";
 	String lblEtiquetaEliminar = "/html/body/main/div[2]/div/div/div";
+	String btnBuscar = "/html/body/main/div[1]/header/nav[2]/div/div[2]/div/div/div[2]/div/div/div/form/div/div/span/button";
 	
 	public void seleccionarCategoria(String strCategoria) {
 		Serenity.takeScreenshot();
@@ -186,6 +189,15 @@ public class esikaPageObjects extends PageObject{
 	public String obtenerMensajeConfirmaEliminacion() {		
 		return find(By.xpath(lblEtiquetaEliminar)).getText();
 	}
-	
-	
+
+	public void seleccionarIrATienda() {
+		if(find(By.xpath(btnIrATienda)).waitUntilVisible() .isVisible()) {
+			find(By.xpath(btnIrATienda)).click();
+		}
+	}
+
+	public void ingresarDato(String strDato) {
+		find(By.id(txtBuscar)).sendKeys(strDato);
+		find(By.xpath(btnBuscar)).click();
+	}
 }

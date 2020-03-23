@@ -1,6 +1,8 @@
 package bel.enavarrete.auto.Steps;
 
 import bel.enavarrete.auto.PageObjects.esikaPageObjects;
+import net.serenitybdd.core.Serenity;
+import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.Step;
 
 public class esikaSteps {
@@ -11,7 +13,7 @@ public class esikaSteps {
 	public void Browser() {
 		ebayObjects.open();
 		try {
-		Thread.sleep(10000);
+		Thread.sleep(4000);
 		}
 		catch (Exception e) {
 			//Do Nothing =P
@@ -148,5 +150,15 @@ public class esikaSteps {
 	@Step
 	public String obtenerMensajeConfirmaEliminacion() {		
 		return ebayObjects.obtenerMensajeConfirmaEliminacion();
+	}
+
+	@Step
+	public void seleccionarIrATienda() {
+		ebayObjects.seleccionarIrATienda();
+	}
+
+	@Step
+	public void ingresarDato(String strDato) {
+		ebayObjects.ingresarDato(strDato);
 	}
 }
