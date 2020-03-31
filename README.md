@@ -16,7 +16,7 @@ Java IDE:
 Now clone this project to your local machine:
 
 ```sh
-$ git clone https://github.com/elionavarretev/belcorp.git
+$ git clone https://github.com/elionavarretev/SerenityBDD-Belcorp.git
 ```
 
 # Building the project
