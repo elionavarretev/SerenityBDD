@@ -28,32 +28,24 @@ public class esikaDefinition {
 
 	@When("^se dirige a la ficha del producto ([^\"]*)$")
 	public void seDirigeALaFichaDelProducto(String strCualquiera){
-		/*esikaSteps.ingresarFichaDelProducto(strCualquiera);
-
-		 */
+		esikaSteps.ingresarFichaDelProducto(strCualquiera);
 	}
 
 	@When("^agrega ([^\"]*) adicional$")
 	public void agregaAdicional(String strCantidad){
-		/*esikaSteps.agregarCantidad(strCantidad);
-
-		 */
+		esikaSteps.agregarCantidad(strCantidad);
 	}
 
 	@Then("^agrega a la bolsa$")
 	public void agregaALaBolsa() {
-		/*esikaSteps.seleccionarAgregarBolsa();
-
-		 */
+		esikaSteps.seleccionarAgregarBolsa();
 	}
 
 	@Then("^se registra como ([^\"]*)$")
 	public void seRegistraComoInvitadoYDar(String strInvitado){
-		/*esikaSteps.seleccionarIrPagarPopPup();
+		esikaSteps.seleccionarIrPagarPopPup();
 		esikaSteps.seleccionarIrPagar();
 		esikaSteps.ingresarComoInvitado(strInvitado);
-
-		 */
 	}
 
 	@Then("^se registra la dirección de ([^\"]*) y anula la compra$")

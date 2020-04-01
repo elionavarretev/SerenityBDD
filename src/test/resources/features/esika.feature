@@ -4,7 +4,7 @@
 Feature: AUTOMATION
 
   @caso
-  Scenario Outline: Flujo de compra
+  Scenario Outline: Flujo
     Given que un invitado y entra a la web esika
     And además, selecciona <categoria> y selecciona <tipo>
     When se dirige a la ficha del producto <cualquiera>

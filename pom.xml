@@ -12,12 +12,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	  	<serenity.version>2.1.9</serenity.version> <!-- https://bintray.com/serenity/maven/serenity-core/ -->
-	  	<serenity.maven.version>1.6.3</serenity.maven.version>
-	  	<serenity.cucumber.version>1.9.50</serenity.cucumber.version> <!--  https://bintray.com/serenity/maven/serenity-cucumber/ -->
-	  	<maven.compiler.source>1.8</maven.compiler.source>
-   	  	<maven.compiler.target>1.8</maven.compiler.target>
-   		<junit.version>4.12</junit.version>
+        <serenity.version>1.6.3</serenity.version> <!-- https://bintray.com/serenity/maven/serenity-core/ -->
+        <serenity.maven.version>1.6.3</serenity.maven.version>
+        <serenity.cucumber.version>1.5.9</serenity.cucumber.version> <!--  https://bintray.com/serenity/maven/serenity-cucumber/ -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
   </properties>
 
   <!-- Define the Bintray repos for convenience -->
@@ -37,16 +37,16 @@
     </pluginRepositories>
 
 
-	
+
 
     <dependencies>
-	    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-junit -->		
-		<dependency>
-		    <groupId>org.hamcrest</groupId>
-		    <artifactId>hamcrest-junit</artifactId>
-		    <version>2.0.0.0</version>
-		    <scope>test</scope>
-		</dependency>
+   <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-junit -->
+<dependency>
+   <groupId>org.hamcrest</groupId>
+   <artifactId>hamcrest-junit</artifactId>
+   <version>2.0.0.0</version>
+   <scope>test</scope>
+</dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
@@ -86,18 +86,18 @@
         </dependency>
         <!--
         <dependency>
-			<groupId>net.serenity-bdd</groupId>
-			<artifactId>serenity-rest-assured</artifactId>
-			<version>${serenity.version}</version>
-		</dependency>		
-		-->
+<groupId>net.serenity-bdd</groupId>
+<artifactId>serenity-rest-assured</artifactId>
+<version>${serenity.version}</version>
+</dependency>
+-->
         <dependency>
-	        <groupId>junit</groupId>
-	        <artifactId>junit</artifactId>
-	        <version>${junit.version}</version>
-	        <scope>test</scope>
+       <groupId>junit</groupId>
+       <artifactId>junit</artifactId>
+       <version>${junit.version}</version>
+       <scope>test</scope>
         </dependency>
-        
+       
         <dependency>
              <groupId>org.apache.poi</groupId> <!--Lectura de documentos de excel para DDT -->
                    <artifactId>poi</artifactId>
@@ -108,86 +108,85 @@
                  <artifactId>poi-ooxml</artifactId>
               <version>3.17</version>
       </dependency>
-      
+     
       <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
-	<dependency>
-	        <groupId>net.sf.json-lib</groupId>
-	        <artifactId>json-lib</artifactId>
-	        <version>2.4</version>
-	        <classifier>jdk15</classifier>
-	    </dependency>
-
-		<dependency>
+<dependency>
+       <groupId>net.sf.json-lib</groupId>
+       <artifactId>json-lib</artifactId>
+       <version>2.4</version>
+       <classifier>jdk15</classifier>
+   </dependency>
+   
+   		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.8</version>
 		</dependency>
 
     </dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
-				<executions>
-					<execution>
-						<id>default-compile</id>
-						<configuration>
-							<showDeprecation>true</showDeprecation>
-							<showWarnings>true</showWarnings>
-							<compilerArguments>
-								<source>${maven.compiler.source}</source>
-								<target>${maven.compiler.target}</target>
-							</compilerArguments>
-						</configuration>
-					</execution>
-					<execution>
-						<id>default-testCompile</id>
-						<configuration>
-							<showDeprecation>true</showDeprecation>
-							<showWarnings>true</showWarnings>
-							<compilerArguments>
-								<source>${maven.compiler.source}</source>
-								<target>${maven.compiler.target}</target>
-							</compilerArguments>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>net.serenity-bdd.maven.plugins</groupId>
-				<artifactId>serenity-maven-plugin</artifactId>
-				<version>1.5.9</version>
-				<executions>
-					<execution>
-						<id>serenity-reports</id>
-						<phase>post-integration-test</phase>
-						<goals>
-							<goal>aggregate</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.20.1</version>
-				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.7.0</version>
+<executions>
+<execution>
+<id>default-compile</id>
+<configuration>
+<showDeprecation>true</showDeprecation>
+<showWarnings>true</showWarnings>
+<compilerArguments>
+<source>${maven.compiler.source}</source>
+<target>${maven.compiler.target}</target>
+</compilerArguments>
+</configuration>
+</execution>
+<execution>
+<id>default-testCompile</id>
+<configuration>
+<showDeprecation>true</showDeprecation>
+<showWarnings>true</showWarnings>
+<compilerArguments>
+<source>${maven.compiler.source}</source>
+<target>${maven.compiler.target}</target>
+</compilerArguments>
+</configuration>
+</execution>
+</executions>
+</plugin>
+<plugin>
+<groupId>net.serenity-bdd.maven.plugins</groupId>
+<artifactId>serenity-maven-plugin</artifactId>
+<version>1.5.9</version>
+<executions>
+<execution>
+<id>serenity-reports</id>
+<phase>post-integration-test</phase>
+<goals>
+<goal>aggregate</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.20.1</version>
+<configuration>
+<testFailureIgnore>true</testFailureIgnore>
 
-					<includes>
-						<include>bel.enavarrete.auto/**/*.java</include><!-- Paquete runners y todas las clases .java -->
-					</includes>
+<includes>
+<include>bel.enavarrete.auto/**/*.java</include><!-- Paquete runners y todas las clases .java -->
+</includes>
 
-					<systemProperties>
-						<!--suppress UnresolvedMavenProperty -->
-						<webdriver.driver>${webdriver.driver}</webdriver.driver>
-					</systemProperties>
+<systemProperties>
+<webdriver.driver>${webdriver.driver}</webdriver.driver>
+</systemProperties>
 
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+</configuration>
+</plugin>
+</plugins>
+</build>
 
 </project>
