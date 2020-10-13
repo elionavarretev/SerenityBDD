@@ -17,7 +17,7 @@
         <serenity.cucumber.version>1.5.9</serenity.cucumber.version> <!--  https://bintray.com/serenity/maven/serenity-cucumber/ -->
         <maven.compiler.source>1.8</maven.compiler.source>
    		<maven.compiler.target>1.8</maven.compiler.target>
-   		<junit.version>4.12</junit.version>
+   		<junit.version>4.13.1</junit.version>
   </properties>
 
   <!-- Define the Bintray repos for convenience -->
